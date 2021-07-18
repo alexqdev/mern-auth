@@ -20,7 +20,7 @@ function App() {
         color: registerColor,
       },
       withCredentials: true,
-      url: "http://localhost:3001/register",
+      url: "https://alexqdev-login-authentication.herokuapp.com/register",
     }).then((res) => alert(res.data));
   };
   const login = () => {
@@ -31,14 +31,14 @@ function App() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3001/login",
+      url: "https://alexqdev-login-authentication.herokuapp.com/login",
     }).then((res) => alert(res.data));
   };
   const getUser = () => {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:3001/user",
+      url: "https://alexqdev-login-authentication.herokuapp.com/user",
     }).then((res) => {
       if (!res.data) {
         alert("Please Sign In");
